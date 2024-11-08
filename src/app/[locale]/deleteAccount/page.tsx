@@ -36,62 +36,62 @@ export default function DeleteRequest() {
   };
 
   return (
-    <div style={styles.pageContainer}>
-      <div style={styles.formContainer}>
-        <h1 style={styles.title}>Delete Account Request</h1>
-        <form onSubmit={handleSubmit} style={styles.form}>
-          <div style={styles.inputGroup}>
-            <label htmlFor="name" style={styles.label}>Name:</label>
+    <div style={styles.pageContainer as React.CSSProperties}>
+      <div style={styles.formContainer as React.CSSProperties}>
+        <h1 style={styles.title as React.CSSProperties}>Delete Account Request</h1>
+        <form onSubmit={handleSubmit} style={styles.form as React.CSSProperties}>
+          <div style={styles.inputGroup as React.CSSProperties}>
+            <label htmlFor="name" style={styles.label as React.CSSProperties}>Name:</label>
             <input
               type="text"
               id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              style={styles.input}
+              style={styles.input as React.CSSProperties}
               required
             />
           </div>
-          <div style={styles.inputGroup}>
-            <label htmlFor="email" style={styles.label}>Email:</label>
+          <div style={styles.inputGroup as React.CSSProperties}>
+            <label htmlFor="email" style={styles.label as React.CSSProperties}>Email:</label>
             <input
               type="email"
               id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              style={styles.input}
+              style={styles.input as React.CSSProperties}
               required
             />
           </div>
-          <div style={styles.inputGroup}>
-            <label style={styles.label}>Delete Option:</label>
-            <div style={styles.radioContainer}>
-              <label style={styles.radioLabel}>
+          <div style={styles.inputGroup as React.CSSProperties}>
+            <label style={styles.label as React.CSSProperties}>Delete Option:</label>
+            <div style={styles.radioContainer as React.CSSProperties}>
+              <label style={styles.radioLabel as React.CSSProperties}>
                 <input
                   type="radio"
                   name="deleteOption"
                   value="accountOnly"
                   checked={formData.deleteOption === 'accountOnly'}
                   onChange={handleChange}
-                  style={styles.radioInput}
+                  style={styles.radioInput as React.CSSProperties}
                 />
                 Delete Account Only
               </label>
-              <label style={styles.radioLabel}>
+              <label style={styles.radioLabel as React.CSSProperties}>
                 <input
                   type="radio"
                   name="deleteOption"
                   value="accountWithData"
                   checked={formData.deleteOption === 'accountWithData'}
                   onChange={handleChange}
-                  style={styles.radioInput}
+                  style={styles.radioInput as React.CSSProperties}
                 />
                 Delete Account with Data
               </label>
             </div>
           </div>
-          <button type="submit" style={styles.submitButton}>Submit Request</button>
+          <button type="submit" style={styles.submitButton as React.CSSProperties}>Submit Request</button>
         </form>
       </div>
     </div>
